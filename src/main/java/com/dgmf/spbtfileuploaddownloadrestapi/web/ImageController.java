@@ -22,7 +22,7 @@ public class ImageController {
     public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile file) throws IOException {
         String uploadImage = service.uploadImage(file);
 
-        return ResponseEntity.status(HttpStatus.OK).body(file);
+        return ResponseEntity.status(HttpStatus.OK).body(uploadImage);
     }
 
     // Endpoint pour récupérer l'image stockée dans la DB
